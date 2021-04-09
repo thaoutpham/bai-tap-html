@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhapso">
+<select name="" id="when">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<select name="" id="laytuday2">
+    <option value="VND">VND</option>
+    <option value="USD">USD</option>
+</select>
+<button onclick="moibtduocti()">convert</button>
+<script>
+    function moibtduocti(){
+        let khaibaobien =document.getElementById("nhapso").value;
+        let when =document.getElementById('when').value;
+        let laytuday2 =document.getElementById('laytuday2').value;
+        if (when == laytuday2){
+            alert(khaibaobien);
+        }
+        if (when =='VND' && laytuday2 =='USD'){
+            alert(khaibaobien/24000);
+        }
+        if (when =='USD' && laytuday2=='VND'){
+            alert(khaibaobien*24000);
+        }
+    }
+
+</script>
+</body>
+</html>
